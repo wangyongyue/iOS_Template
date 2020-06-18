@@ -47,6 +47,11 @@
 
     return cell;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    id model = self.array[indexPath.row];
+    id obj = [model performSelector:@selector(size)];
+    return [obj CGSizeValue].height;
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     self.block(indexPath.row);

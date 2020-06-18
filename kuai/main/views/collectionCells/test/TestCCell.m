@@ -37,13 +37,9 @@
 @end
 
 @implementation TestC
-- (NSString *)identifier{
-    
-    return NSStringFromClass([TestCCell class]);
-}
+- (NSString *)identifier{ return NSStringFromClass([TestCCell class]);}
 - (NSValue *)size{
-    CGSize size = CGSizeMake(ScreenWidth/2, 50);
-    return [NSValue valueWithCGSize:size];
+    return [NSValue valueWithCGSize:CGSizeMake(ScreenWidth/2, 50)];
 }
 
 @end

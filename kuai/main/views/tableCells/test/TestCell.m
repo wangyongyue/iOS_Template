@@ -33,8 +33,7 @@
 @end
 
 @implementation Test
-- (NSString *)identifier{
-    
-    return NSStringFromClass([TestCell class]);
-}
+- (NSString *)identifier{return NSStringFromClass([TestCell class]);}
+- (NSValue *)size{return [NSValue valueWithCGSize:CGSizeMake(0, 50)];}
+
 @end
