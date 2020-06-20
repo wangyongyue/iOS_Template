@@ -51,6 +51,7 @@
 		188CB25124934C1900B8A194 /* BeTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB25024934C1900B8A194 /* BeTap.m */; };
 		188CB25424934C2900B8A194 /* BeSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB25324934C2900B8A194 /* BeSlide.m */; };
 		188CB25824936D3C00B8A194 /* TabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB25724936D3C00B8A194 /* TabVC.m */; };
+		45AF2F2C249E01FE00BDEBBF /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AF2F2B249E01FE00BDEBBF /* Network.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,8 @@
 		188CB25324934C2900B8A194 /* BeSlide.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeSlide.m; sourceTree = "<group>"; };
 		188CB25624936D3C00B8A194 /* TabVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabVC.h; sourceTree = "<group>"; };
 		188CB25724936D3C00B8A194 /* TabVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabVC.m; sourceTree = "<group>"; };
+		45AF2F2A249E01FE00BDEBBF /* Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
+		45AF2F2B249E01FE00BDEBBF /* Network.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Network.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +264,7 @@
 				188CB1D32491C2BF00B8A194 /* router */,
 				188CB1C42490CDE700B8A194 /* navigation */,
 				188CB1C32490CDE500B8A194 /* tabBar */,
+				45AF2F29249E01B900BDEBBF /* networks */,
 				188CB1C12490CDDF00B8A194 /* servers */,
 				188CB1C02490CDDD00B8A194 /* views */,
 				188CB1BF2490CDDA00B8A194 /* controllers */,
@@ -634,6 +638,15 @@
 			path = tab;
 			sourceTree = "<group>";
 		};
+		45AF2F29249E01B900BDEBBF /* networks */ = {
+			isa = PBXGroup;
+			children = (
+				45AF2F2A249E01FE00BDEBBF /* Network.h */,
+				45AF2F2B249E01FE00BDEBBF /* Network.m */,
+			);
+			path = networks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -770,6 +783,7 @@
 				188CB1D92491C3A400B8A194 /* NavgationVC.m in Sources */,
 				188CB203249214BB00B8A194 /* Register.m in Sources */,
 				188CB1DC2491C3B200B8A194 /* TabBarVC.m in Sources */,
+				45AF2F2C249E01FE00BDEBBF /* Network.m in Sources */,
 				188CB1FC2492029700B8A194 /* TestCCell.m in Sources */,
 				188CB2152492150A00B8A194 /* Follow.m in Sources */,
 				188CB17C248F647300B8A194 /* ViewController.m in Sources */,

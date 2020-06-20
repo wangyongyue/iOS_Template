@@ -26,9 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)tableIndex:(NSInteger)index;
 
 
-- (NSString *)url;
-- (NSMutableDictionary *)body;
-
 + (Server *)factory:(NSString *)name;
 - (void)reloadData:(ReloadBlock)block;
 - (void)reloadNavData:(ReloadBlock)block;

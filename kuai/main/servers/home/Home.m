@@ -95,15 +95,5 @@
     
 }
 
-- (NSString *)url{
-    
-    return @"";
-    
-}
-- (NSMutableDictionary *)body{
-    
-    return [NSMutableDictionary dictionary];
-    
-}
 
 @end

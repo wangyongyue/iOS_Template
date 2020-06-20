@@ -43,9 +43,5 @@
     return @"";
     
 }
-- (NSMutableDictionary *)body{
-    
-    return [NSMutableDictionary dictionary];
-    
-}
+
 @end
