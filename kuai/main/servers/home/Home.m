@@ -23,9 +23,7 @@
 {
     self = [super init];
     if (self) {
-        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(releadVideo) name:VideoObserver object:nil];
-
     }
     return self;
 }
