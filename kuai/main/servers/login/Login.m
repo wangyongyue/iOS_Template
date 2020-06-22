@@ -11,7 +11,6 @@
 - (UIViewController *)controller{
     
     DefaultVC *vc = [[DefaultVC alloc]init];
-    vc.server = self;
     return vc;
 }
 

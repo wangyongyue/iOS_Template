@@ -13,9 +13,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Router : NSObject
-+ (void)pushViewController:(UIViewController *)controller;
-+ (void)push:(Server *)server;
-+ (void)pop;
++ (instancetype)shared;
+- (void)push:(NSString *)server;
+- (void)pop;
+- (Server *)server;
 @end
 
 NS_ASSUME_NONNULL_END

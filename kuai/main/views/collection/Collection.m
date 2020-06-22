@@ -36,6 +36,9 @@
     id model = self.array[indexPath.row];
     NSString *identifier = [model performSelector:@selector(identifier)];
     [self registerClass:NSClassFromString(identifier) forCellWithReuseIdentifier:identifier];
+    if ([[NSBundle mainBundle] pathForResource:identifier ofType:@"nib"]) {
+        [self registerNib:[UINib nibWithNibName:identifier bundle:nil] forCellWithReuseIdentifier:identifier];
+    }
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     [cell performSelector:@selector(loadModel:) withObject:model];
     return cell;

@@ -31,7 +31,7 @@
         self.label1.textColor = [UIColor whiteColor];
         self.label1.textAlignment = NSTextAlignmentLeft;
         [self.contentView addSubview:self.label1];
-        self.label1.frame = CGRectMake(0, ScreenHeight - 200, ScreenWidth, 100);
+        self.label1.frame = CGRectMake(0, 200, ScreenWidth, 100);
         self.label1.numberOfLines = 0;
 
     }
@@ -58,7 +58,7 @@
     return NSStringFromClass([Cell004View class]);
 }
 - (NSValue *)size{
-    CGSize size = CGSizeMake(ScreenWidth, ScreenHeight);
+    CGSize size = CGSizeMake(ScreenWidth, ScreenHeight - 200);
     return [NSValue valueWithCGSize:size];
 }
 @end

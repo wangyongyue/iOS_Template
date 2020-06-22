@@ -13,10 +13,17 @@
 #import "TestCCell.h"
 
 @interface DefaultVC ()
+@property(nonatomic,strong)Server *server;
 
 @end
 
 @implementation DefaultVC
+- (Server *)server{
+    if (_server == nil) {
+        _server = [[Router shared] server];
+    }
+    return _server;
+}
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];

@@ -1,8 +1,8 @@
 //
-//  TabVC.h
+//  MainViewController.h
 //  kuai
 //
-//  Created by apple on 2020/6/12.
+//  Created by apple on 2020/6/22.
 //  Copyright © 2020 sui. All rights reserved.
 //
 
@@ -14,7 +14,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TabVC : UIViewController
+@interface MainViewController : UIViewController
 @property(nonatomic,strong)Server *server;
 
 @end

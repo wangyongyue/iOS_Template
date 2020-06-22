@@ -50,7 +50,9 @@
 		188CB24C24934BDE00B8A194 /* Behavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB24B24934BDE00B8A194 /* Behavior.m */; };
 		188CB25124934C1900B8A194 /* BeTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB25024934C1900B8A194 /* BeTap.m */; };
 		188CB25424934C2900B8A194 /* BeSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB25324934C2900B8A194 /* BeSlide.m */; };
-		188CB25824936D3C00B8A194 /* TabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB25724936D3C00B8A194 /* TabVC.m */; };
+		18C7478A24A078E8007AE7C0 /* Cell005View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C7478924A078E8007AE7C0 /* Cell005View.xib */; };
+		18C7478D24A0923C007AE7C0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7478C24A0923C007AE7C0 /* MainViewController.m */; };
+		18C7479024A09367007AE7C0 /* SeatchDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7478F24A09367007AE7C0 /* SeatchDetails.m */; };
 		45AF2F2C249E01FE00BDEBBF /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AF2F2B249E01FE00BDEBBF /* Network.m */; };
 /* End PBXBuildFile section */
 
@@ -159,8 +161,11 @@
 		188CB25024934C1900B8A194 /* BeTap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeTap.m; sourceTree = "<group>"; };
 		188CB25224934C2900B8A194 /* BeSlide.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeSlide.h; sourceTree = "<group>"; };
 		188CB25324934C2900B8A194 /* BeSlide.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeSlide.m; sourceTree = "<group>"; };
-		188CB25624936D3C00B8A194 /* TabVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabVC.h; sourceTree = "<group>"; };
-		188CB25724936D3C00B8A194 /* TabVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabVC.m; sourceTree = "<group>"; };
+		18C7478924A078E8007AE7C0 /* Cell005View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell005View.xib; sourceTree = "<group>"; };
+		18C7478B24A0923C007AE7C0 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		18C7478C24A0923C007AE7C0 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		18C7478E24A09367007AE7C0 /* SeatchDetails.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeatchDetails.h; sourceTree = "<group>"; };
+		18C7478F24A09367007AE7C0 /* SeatchDetails.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeatchDetails.m; sourceTree = "<group>"; };
 		45AF2F2A249E01FE00BDEBBF /* Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
 		45AF2F2B249E01FE00BDEBBF /* Network.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Network.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -275,8 +280,9 @@
 		188CB1BF2490CDDA00B8A194 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				188CB25524936D1700B8A194 /* tab */,
 				188CB1EF2491CDD900B8A194 /* default */,
+				18C7478B24A0923C007AE7C0 /* MainViewController.h */,
+				18C7478C24A0923C007AE7C0 /* MainViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -284,10 +290,10 @@
 		188CB1C02490CDDD00B8A194 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				188CB1DE2491C3D700B8A194 /* collectionCells */,
 				186014B9249717360038DAE8 /* flowLayout */,
 				188CB1E02491C3F000B8A194 /* collection */,
 				188CB1DF2491C3E300B8A194 /* table */,
-				188CB1DE2491C3D700B8A194 /* collectionCells */,
 				188CB1DD2491C3CA00B8A194 /* tableCells */,
 			);
 			path = views;
@@ -369,6 +375,8 @@
 			children = (
 				188CB20A249214DA00B8A194 /* Search.h */,
 				188CB20B249214DA00B8A194 /* Search.m */,
+				18C7478E24A09367007AE7C0 /* SeatchDetails.h */,
+				18C7478F24A09367007AE7C0 /* SeatchDetails.m */,
 			);
 			path = search;
 			sourceTree = "<group>";
@@ -560,6 +568,7 @@
 			children = (
 				188CB23724921C3400B8A194 /* Cell005View.h */,
 				188CB23824921C3400B8A194 /* Cell005View.m */,
+				18C7478924A078E8007AE7C0 /* Cell005View.xib */,
 			);
 			path = Cell005;
 			sourceTree = "<group>";
@@ -627,15 +636,6 @@
 				188CB25024934C1900B8A194 /* BeTap.m */,
 			);
 			path = tap;
-			sourceTree = "<group>";
-		};
-		188CB25524936D1700B8A194 /* tab */ = {
-			isa = PBXGroup;
-			children = (
-				188CB25624936D3C00B8A194 /* TabVC.h */,
-				188CB25724936D3C00B8A194 /* TabVC.m */,
-			);
-			path = tab;
 			sourceTree = "<group>";
 		};
 		45AF2F29249E01B900BDEBBF /* networks */ = {
@@ -752,6 +752,7 @@
 			files = (
 				188CB184248F647800B8A194 /* LaunchScreen.storyboard in Resources */,
 				188CB181248F647800B8A194 /* Assets.xcassets in Resources */,
+				18C7478A24A078E8007AE7C0 /* Cell005View.xib in Resources */,
 				188CB17F248F647300B8A194 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -794,7 +795,6 @@
 				188CB23C24921C4100B8A194 /* Cell007View.m in Sources */,
 				188CB25424934C2900B8A194 /* BeSlide.m in Sources */,
 				188CB176248F647300B8A194 /* AppDelegate.m in Sources */,
-				188CB25824936D3C00B8A194 /* TabVC.m in Sources */,
 				188CB1E62491C42300B8A194 /* Table.m in Sources */,
 				188CB23924921C3400B8A194 /* Cell005View.m in Sources */,
 				186014BC249717680038DAE8 /* FlowLayout.m in Sources */,
@@ -802,10 +802,12 @@
 				188CB209249214D000B8A194 /* Home.m in Sources */,
 				188CB2452493200B00B8A194 /* Video.m in Sources */,
 				188CB1C72490CE3F00B8A194 /* DefaultVC.m in Sources */,
+				18C7478D24A0923C007AE7C0 /* MainViewController.m in Sources */,
 				188CB22124921BC400B8A194 /* Cell001View.m in Sources */,
 				188CB2422492321900B8A194 /* TabBar.m in Sources */,
 				188CB1AB248F65D700B8A194 /* CameraVC.m in Sources */,
 				188CB2482493235300B8A194 /* UIView+gesture.m in Sources */,
+				18C7479024A09367007AE7C0 /* SeatchDetails.m in Sources */,
 				188CB1F92491DB1F00B8A194 /* TestCell.m in Sources */,
 				188CB1F22491D21500B8A194 /* Login.m in Sources */,
 				188CB206249214C400B8A194 /* Forget.m in Sources */,

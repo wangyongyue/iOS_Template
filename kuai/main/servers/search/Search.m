@@ -11,7 +11,7 @@
 @implementation Search
 - (UIViewController *)controller{
     
-    DefaultVC *vc = [[DefaultVC alloc]init];
+    MainViewController *vc = [[MainViewController alloc]init];
     vc.server = self;
     return vc;
 }
@@ -44,6 +44,8 @@
     
 }
 - (void)tableIndex:(NSInteger)index{
+    
+    [[Router shared] push:@"SeatchDetails"];
     
 }
 

@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface Cell005View : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 @interface Cell005 : NSObject

@@ -1,23 +1,23 @@
 //
-//  TabVC.m
+//  MainViewController.m
 //  kuai
 //
-//  Created by apple on 2020/6/12.
+//  Created by apple on 2020/6/22.
 //  Copyright © 2020 sui. All rights reserved.
 //
 
-#import "TabVC.h"
+#import "MainViewController.h"
 #import "DefaultVC.h"
 #import "Table.h"
 #import "TestCell.h"
 #import "Collection.h"
 #import "TestCCell.h"
 
-@interface TabVC ()
+@interface MainViewController ()
 
 @end
 
-@implementation TabVC
+@implementation MainViewController
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -46,8 +46,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor blackColor];
-    self.automaticallyAdjustsScrollViewInsets = NO;
+//    Table *table = [[Table alloc]initWithFrame:self.view.bounds];
+//    [self.view addSubview:table];
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     layout.itemSize = CGSizeMake(ScreenWidth, Top);
@@ -57,6 +57,7 @@
     
     CGRect rectTop = CGRectMake(0, -20, ScreenWidth,Top);
     Collection *topTable = [[Collection alloc]initWithFrame:rectTop collectionViewLayout:layout];
+    [self.view addSubview:topTable];
     [topTable tableIndex:^(NSInteger index) {
         NSLog(@"%d",index);
         [self.server navgationIndex:index];
@@ -64,10 +65,10 @@
     topTable.array = [self.server loadNavigationData:nil];
     [topTable reloadData];
 
-    CGRect rect = CGRectMake(0,-20, ScreenWidth, ScreenHeight + 20);
-    rect = self.view.bounds;
+    CGRect rect = CGRectMake(0, Top - 20, ScreenWidth, ScreenHeight - Top + 20);
     FlowLayout *flowLayout = [[FlowLayout alloc]initWithScrollDirection:[self.server scrollDirection]];
     Collection *table = [[Collection alloc]initWithFrame:rect collectionViewLayout:flowLayout];
+    [self.view addSubview:table];
     [table tableIndex:^(NSInteger index) {
         NSLog(@"%d",index);
         [self.server tableIndex:index];
@@ -75,10 +76,8 @@
     table.array = [self.server loadTableData:nil];;
     [table reloadData];
     
-    table.pagingEnabled = YES;
-    [self.view addSubview:table];
-    [self.view addSubview:topTable];
-    topTable.backgroundColor = [UIColor clearColor];
+    
+    topTable.backgroundColor = [UIColor blackColor];
     table.backgroundColor = [UIColor blackColor];
     
     [self.server reloadData:^{

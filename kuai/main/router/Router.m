@@ -7,54 +7,53 @@
 //
 
 #import "Router.h"
+@interface Router ()
+@property(nonatomic,strong)NSMutableArray *servers;
+
+@end
 @implementation Router
++ (instancetype)shared{
+    static Router *_router = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _router = [[super allocWithZone:NULL] init];
+    });
+    return _router;
+}
+- (NSMutableArray *)servers{
+    if (_servers == nil) {
+        _servers = [NSMutableArray array];
+    }
+    return _servers;
+}
+- (Server *)server{
+    if (self.servers.count > 0) {
+        return self.servers.lastObject;
+    }
+    return [[Server alloc]init];
+}
+- (void)push:(NSString *)server{
+    Server *se = (Server *) [[NSClassFromString(server) alloc]init];
+    [self.servers addObject:se];
+    
+    UINavigationController *na =  [Router currentNC];
+    [na pushViewController:[se controller] animated:YES];
+        
+}
+- (void)pop{
+    if (self.servers.count > 0) {
+        [self.servers removeLastObject];
+    }
+    UINavigationController *na =  [Router currentNC];
+    [na popViewControllerAnimated:YES];
+    
+}
 + (UIViewController *)currenViewController{
     
    UINavigationController *na =  [Router currentNC];
-    return na.viewControllers.lastObject;
+   return na.viewControllers.lastObject;
     
 }
-+ (void)pushViewController:(UIViewController *)controller{
-    
-    [[Router currentNC] pushViewController:controller animated:YES];
-    
-}
-+ (void)push:(Server *)server{
-    
-    UIViewController *vc = [server controller];
-    [Router pushViewController:vc];
-}
-+ (void)pop{
-    
-    [[Router currentNC] popViewControllerAnimated:YES];
-
-}
-
-+ (void)popNoAnimated{
-    
-    [[Router currentNC] popViewControllerAnimated:NO];
-
-}
-+ (void)naviagtionWithRightItems:(NSArray *)array{
-
-    NSMutableArray *items = [[NSMutableArray alloc]init];
-    for (UIButton *item in array) {
-        
-        UIBarButtonItem *a = [[UIBarButtonItem alloc]initWithCustomView:item];
-        [items addObject:a];
-    }
-    UIViewController *vc = [Router currentNC].viewControllers.lastObject;
-    vc.navigationItem.rightBarButtonItems = items;
-
-}
-+ (void)naviagtionWithBackItem:(UIButton *)button{
-    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:button];
-    UIViewController *vc = [Router currentNC].viewControllers.lastObject;
-    vc.navigationItem.leftBarButtonItem = item;
-    
-}
-
-
 
 + (UINavigationController *)currentNC
 {

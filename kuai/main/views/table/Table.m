@@ -40,7 +40,9 @@
     id model = self.array[indexPath.row];
     NSString *identifier = [model performSelector:@selector(identifier)];
     [self registerClass:NSClassFromString(identifier) forCellReuseIdentifier:identifier];
-
+    if ([[NSBundle mainBundle] pathForResource:identifier ofType:@"nib"]) {
+        [self registerNib:[UINib nibWithNibName:identifier bundle:nil] forCellReuseIdentifier:identifier];
+    }
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     [cell performSelector:@selector(loadModel:) withObject:model];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;

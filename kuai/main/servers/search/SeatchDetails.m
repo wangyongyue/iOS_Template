@@ -1,24 +1,23 @@
 //
-//  Mine.m
+//  SeatchDetails.m
 //  kuai
 //
-//  Created by apple on 2020/6/11.
+//  Created by apple on 2020/6/22.
 //  Copyright © 2020 sui. All rights reserved.
 //
 
-#import "Mine.h"
 
-@implementation Mine
+#import "SeatchDetails.h"
+
+@implementation SeatchDetails
 - (UIViewController *)controller{
     
-    MainViewController *vc = [[MainViewController alloc]init];
-    vc.server = self;
-    return vc;
+    return [[DefaultVC alloc]init];
 }
 - (NSArray *)loadNavigationData:(NSDictionary *)reponse{
     NSMutableArray *arry = [NSMutableArray array];
     Cell002 *m = [[Cell002 alloc]init];
-    m.title = @"我的";
+    m.title = @"搜索详情";
     [arry addObject:m];
     return arry;
     
@@ -26,21 +25,24 @@
 - (void)navgationIndex:(NSInteger)index{
     
 }
-
 - (NSArray *)loadTableData:(NSDictionary *)reponse{
     
     NSMutableArray *arry = [NSMutableArray array];
-       
+    for (int i = 0; i < 100; i ++) {
+        
+        if (i == 5 || i == 10) {
+            Cell005 *t = [[Cell005 alloc]init];
+            [arry addObject:t];
+        }else{
+            TestC *t = [[TestC alloc]init];
+            t.title1 = [NSString stringWithFormat:@"%d",i + 1];
+            [arry addObject:t];
+        }
+    }
     return arry;
     
 }
 - (void)tableIndex:(NSInteger)index{
-    
-}
-
-- (NSString *)url{
-    
-    return @"";
     
 }
 

@@ -17,11 +17,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
-        UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 20)];
-        [self.contentView addSubview:lable];
-        lable.backgroundColor = [UIColor whiteColor];
-        lable.text = @"sdfsfsfdsdfsfds s sdf sdf sfd ddsdfs sd s";
+ 
         
        
     }
@@ -30,14 +26,13 @@
 
 - (void)loadModel:(id)model{
     
-    
+    self.label.text = @"sdfsfsdfsddfsdfs";
 }
 
 @end
 
 @implementation Cell005
 - (NSString *)identifier{
-    
     return NSStringFromClass([Cell005View class]);
 }
 - (NSValue *)size{

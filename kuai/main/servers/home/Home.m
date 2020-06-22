@@ -11,6 +11,7 @@
 @interface Home()
 @property(nonatomic,strong)NSMutableArray *navArray;
 @property(nonatomic,strong)NSMutableArray *array;
+@property(nonatomic,strong)MainViewController *vc;
 
 @end
 @implementation Home
@@ -45,9 +46,9 @@
 }
 - (UIViewController *)controller{
     
-    TabVC *vc = [[TabVC alloc]init];
-    vc.server = self;
-    return vc;
+    self.vc = [[MainViewController alloc]init];
+    self.vc.server = self;
+    return self.vc;
 }
 - (NSArray *)loadNavigationData:(NSDictionary *)reponse{
     Cell003 *m = [[Cell003 alloc]init];
@@ -65,7 +66,8 @@
     if (m.index == 3) {
         
         CameraVC *vc = [[CameraVC alloc]init];
-        [Router pushViewController:vc];
+        
+        [self.vc.navigationController pushViewController:vc animated:YES];
     }else{
         
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:VideoUrls];

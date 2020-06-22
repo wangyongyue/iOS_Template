@@ -24,9 +24,9 @@ typedef void(^ReloadBlock)(void);
 #import "BeTap.h"
 #import "BeSlide.h"
 #import "UIView+gesture.h"
-#import "TabVC.h"
 #import "FlowLayout.h"
 #import "Network.h"
+#import "MainViewController.h"
 
 
 #import "DefaultVC.h"
@@ -40,5 +40,7 @@ typedef void(^ReloadBlock)(void);
 #import "Cell006View.h"
 #import "Cell007View.h"
 #import "Cell008View.h"
+
+
 
 #endif /* Header_h */
