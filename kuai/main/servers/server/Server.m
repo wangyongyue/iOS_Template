@@ -20,8 +20,7 @@
 - (void)tableIndex:(NSInteger)index{}
 
 - (UICollectionViewScrollDirection)scrollDirection{return UICollectionViewScrollDirectionVertical;}
-- (NSString *)url{return @"";}
-- (NSMutableDictionary *)body{return [NSMutableDictionary dictionary];}
+
 
 + (Server *)factory:(NSString *)name{return [[NSClassFromString(name) alloc]init];}
 

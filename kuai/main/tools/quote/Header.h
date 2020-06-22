@@ -26,6 +26,8 @@ typedef void(^ReloadBlock)(void);
 #import "UIView+gesture.h"
 #import "TabVC.h"
 #import "FlowLayout.h"
+#import "Network.h"
+
 
 #import "DefaultVC.h"
 #import "TestCCell.h"
