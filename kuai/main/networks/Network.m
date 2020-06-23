@@ -11,5 +11,6 @@
 @implementation Network
 - (NSString *)url{return @"";}
 - (NSMutableDictionary *)body{return [NSMutableDictionary dictionary];}
+- (NSMutableArray *)views{return [NSMutableArray array];}
 
 @end

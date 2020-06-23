@@ -40,6 +40,14 @@
     [na pushViewController:[se controller] animated:YES];
         
 }
+- (void)push:(NSString *)server params:(id)params{
+    
+    Server *se = (Server *) [[NSClassFromString(server) alloc]init];
+    [self.servers addObject:se];
+    se.obj = params;
+    UINavigationController *na =  [Router currentNC];
+    [na pushViewController:[se controller] animated:YES];
+}
 - (void)pop{
     if (self.servers.count > 0) {
         [self.servers removeLastObject];

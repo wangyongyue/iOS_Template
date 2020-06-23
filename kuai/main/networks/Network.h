@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Network : NSObject
 - (NSString *)url;
 - (NSMutableDictionary *)body;
+- (NSMutableArray *)views;
+
 @end
 
 NS_ASSUME_NONNULL_END
