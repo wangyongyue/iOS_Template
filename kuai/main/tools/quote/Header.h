@@ -25,7 +25,6 @@ typedef void(^ReloadBlock)(void);
 #import "BeSlide.h"
 #import "UIView+gesture.h"
 #import "FlowLayout.h"
-#import "Network.h"
 #import "MainViewController.h"
 
 

@@ -9,7 +9,10 @@
 #import "Server.h"
 #import "Header.h"
 @implementation Server
-- (UIViewController *)controller{return [[UIViewController alloc]init];};
+- (UIViewController *)controller{return [[UIViewController alloc]init];}
+- (NSString *)url{return @"";}
+- (NSMutableDictionary *)body{return [NSMutableDictionary dictionary];}
+
 - (void)reloadData:(ReloadBlock)block{self.reload = block;}
 - (void)reloadNavData:(ReloadBlock)block{self.navReload = block;}
 
@@ -20,7 +23,6 @@
 - (void)tableIndex:(NSInteger)index{}
 
 - (UICollectionViewScrollDirection)scrollDirection{return UICollectionViewScrollDirectionVertical;}
-
 
 + (Server *)factory:(NSString *)name{return [[NSClassFromString(name) alloc]init];}
 

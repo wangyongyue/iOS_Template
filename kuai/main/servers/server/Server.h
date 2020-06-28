@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIViewController *)controller;
 - (UICollectionViewScrollDirection)scrollDirection;
 
+- (NSString *)url;
+- (NSMutableDictionary *)body;
+
 - (NSArray *)loadNavigationData:(NSDictionary *)reponse;
 - (void)navgationIndex:(NSInteger)index;
 

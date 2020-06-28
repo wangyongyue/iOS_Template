@@ -35,7 +35,6 @@
 - (void)push:(NSString *)server{
     Server *se = (Server *) [[NSClassFromString(server) alloc]init];
     [self.servers addObject:se];
-    
     UINavigationController *na =  [Router currentNC];
     [na pushViewController:[se controller] animated:YES];
         
