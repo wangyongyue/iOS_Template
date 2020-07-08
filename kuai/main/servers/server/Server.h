@@ -12,26 +12,18 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Server : NSObject
-@property(nonatomic,strong)id obj;
+@property(nonatomic,strong)NSMutableArray *array;
 @property(nonatomic,copy)ReloadBlock reload;
-@property(nonatomic,copy)ReloadBlock navReload;
-
-- (UIViewController *)controller;
-- (UICollectionViewScrollDirection)scrollDirection;
 
 - (NSString *)url;
 - (NSMutableDictionary *)body;
 
-- (NSArray *)loadNavigationData:(NSDictionary *)reponse;
-- (void)navgationIndex:(NSInteger)index;
 
-- (NSArray *)loadTableData:(NSDictionary *)reponse;
+- (void)loadTableData:(NSDictionary *)reponse;
 - (void)tableIndex:(NSInteger)index;
 
 
-+ (Server *)factory:(NSString *)name;
 - (void)reloadData:(ReloadBlock)block;
-- (void)reloadNavData:(ReloadBlock)block;
 
 
 @end

@@ -61,7 +61,7 @@
             label.textColor = [UIColor whiteColor];
         }
         if (self.number == 0) {
-            self.backgroundColor = [UIColor clearColor];
+            self.backgroundColor = [UIColor blackColor];
         }else{
             self.backgroundColor = [UIColor blackColor];
         }

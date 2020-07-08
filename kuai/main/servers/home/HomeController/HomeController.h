@@ -1,19 +1,16 @@
 //
-//  DefaultVC.h
+//  HomeController.h
 //  kuai
 //
-//  Created by apple on 2020/6/10.
+//  Created by wangyongyue on 2020/7/8.
 //  Copyright © 2020 sui. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "Header.h"
-#import "Server.h"
-@class Server;
-
+#import "MainController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DefaultVC : UIViewController
+@interface HomeController : MainController
 
 @end
 

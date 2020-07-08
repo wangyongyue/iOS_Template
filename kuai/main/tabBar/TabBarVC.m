@@ -11,14 +11,14 @@
 #import "Login.h"
 #import "ViewController.h"
 #import "TabBar.h"
+#import "HomeController.h"
+#import "SearchController.h"
+#import "MineController.h"
 
 @implementation TabBarVC
 - (void)viewDidLoad{
     [super viewDidLoad];
-    
    
-   
-    
 //    [self.tabBar setBackgroundColor:[UIColor blackColor]];
     
     TabBar *bar = [[TabBar alloc]initWithFrame:self.tabBar.bounds];
@@ -55,16 +55,16 @@
 }
 - (void)createContrllrs{
     
-    Server *m1 = [Server factory:@"Home"];
-    NavgationVC *home = [[NavgationVC alloc]initWithRootViewController:[m1 controller]];
+    UIViewController *m1 = [[HomeController alloc]init];
+    NavgationVC *home = [[NavgationVC alloc]initWithRootViewController:m1];
     [self addController:home withTitle:@"首页" imageName:@"" selectedImageName:@""];
     
-    Server *m2 = [Server factory:@"Search"];
-    NavgationVC *search = [[NavgationVC alloc]initWithRootViewController:[m2 controller]];
+    UIViewController *m2 = [[SearchController alloc]init];
+    NavgationVC *search = [[NavgationVC alloc]initWithRootViewController:m2];
     [self addController:search withTitle:@"搜索" imageName:@"" selectedImageName:@""];
     
-    Server *m3 = [Server factory:@"Mine"];
-    NavgationVC *mine = [[NavgationVC alloc]initWithRootViewController:[m3 controller]];
+    UIViewController *m3 = [[MineController alloc]init];
+    NavgationVC *mine = [[NavgationVC alloc]initWithRootViewController:m3];
     [self addController:mine withTitle:@"我的" imageName:@"" selectedImageName:@""];
     
     

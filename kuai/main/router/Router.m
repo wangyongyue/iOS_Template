@@ -8,49 +8,17 @@
 
 #import "Router.h"
 @interface Router ()
-@property(nonatomic,strong)NSMutableArray *servers;
 
 @end
 @implementation Router
-+ (instancetype)shared{
-    static Router *_router = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _router = [[super allocWithZone:NULL] init];
-    });
-    return _router;
-}
-- (NSMutableArray *)servers{
-    if (_servers == nil) {
-        _servers = [NSMutableArray array];
-    }
-    return _servers;
-}
-- (Server *)server{
-    if (self.servers.count > 0) {
-        return self.servers.lastObject;
-    }
-    return [[Server alloc]init];
-}
-- (void)push:(NSString *)server{
-    Server *se = (Server *) [[NSClassFromString(server) alloc]init];
-    [self.servers addObject:se];
+
++ (void)push:(UIViewController *)controller{
     UINavigationController *na =  [Router currentNC];
-    [na pushViewController:[se controller] animated:YES];
-        
+    [na pushViewController:controller animated:YES];
 }
-- (void)push:(NSString *)server params:(id)params{
+
++ (void)pop{
     
-    Server *se = (Server *) [[NSClassFromString(server) alloc]init];
-    [self.servers addObject:se];
-    se.obj = params;
-    UINavigationController *na =  [Router currentNC];
-    [na pushViewController:[se controller] animated:YES];
-}
-- (void)pop{
-    if (self.servers.count > 0) {
-        [self.servers removeLastObject];
-    }
     UINavigationController *na =  [Router currentNC];
     [na popViewControllerAnimated:YES];
     

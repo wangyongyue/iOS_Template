@@ -81,7 +81,6 @@
     [strs addObject:self.url];
     [[NSUserDefaults standardUserDefaults] setObject:strs forKey:VideoUrls];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:VideoObserver object:nil];
     
     
     

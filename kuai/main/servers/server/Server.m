@@ -14,16 +14,16 @@
 - (NSMutableDictionary *)body{return [NSMutableDictionary dictionary];}
 
 - (void)reloadData:(ReloadBlock)block{self.reload = block;}
-- (void)reloadNavData:(ReloadBlock)block{self.navReload = block;}
 
-- (NSArray *)loadNavigationData:(NSDictionary *)reponse{return [[NSArray alloc]init];}
-- (void)navgationIndex:(NSInteger)index{}
 
-- (NSArray *)loadTableData:(NSDictionary *)reponse{return [[NSArray alloc]init];}
+- (void)loadTableData:(NSDictionary *)reponse{}
 - (void)tableIndex:(NSInteger)index{}
+- (NSMutableArray *)array{
+    if (_array == nil) {
+        _array = [NSMutableArray array];
+    }
+    return _array;
+}
 
-- (UICollectionViewScrollDirection)scrollDirection{return UICollectionViewScrollDirectionVertical;}
-
-+ (Server *)factory:(NSString *)name{return [[NSClassFromString(name) alloc]init];}
 
 @end

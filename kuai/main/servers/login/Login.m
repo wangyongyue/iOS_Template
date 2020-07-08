@@ -8,11 +8,6 @@
 
 #import "Login.h"
 @implementation Login
-- (UIViewController *)controller{
-    
-    DefaultVC *vc = [[DefaultVC alloc]init];
-    return vc;
-}
 
 
 @end

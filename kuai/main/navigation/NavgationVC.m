@@ -11,6 +11,6 @@
 @implementation NavgationVC
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [self.navigationBar setHidden:YES];
+    
 }
 @end

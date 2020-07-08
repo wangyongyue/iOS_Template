@@ -1,20 +1,18 @@
 //
-//  Cell001View.h
+//  MineController.h
 //  kuai
 //
-//  Created by apple on 2020/6/11.
+//  Created by wangyongyue on 2020/7/8.
 //  Copyright © 2020 sui. All rights reserved.
 //
 
-
 #import <UIKit/UIKit.h>
+#import "MainController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Cell001View : UICollectionViewCell
+@interface MineController : MainController
 
 @end
-@interface Cell001 : NSObject
 
-@end
 NS_ASSUME_NONNULL_END

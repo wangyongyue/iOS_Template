@@ -9,29 +9,11 @@
 #import "Mine.h"
 
 @implementation Mine
-- (UIViewController *)controller{
-    
-    MainViewController *vc = [[MainViewController alloc]init];
-    vc.server = self;
-    return vc;
-}
-- (NSArray *)loadNavigationData:(NSDictionary *)reponse{
-    NSMutableArray *arry = [NSMutableArray array];
-    Cell002 *m = [[Cell002 alloc]init];
-    m.title = @"我的";
-    [arry addObject:m];
-    return arry;
-    
-}
-- (void)navgationIndex:(NSInteger)index{
-    
-}
 
-- (NSArray *)loadTableData:(NSDictionary *)reponse{
-    
-    NSMutableArray *arry = [NSMutableArray array];
-       
-    return arry;
+
+
+- (void)loadTableData:(NSDictionary *)reponse{
+
     
 }
 - (void)tableIndex:(NSInteger)index{

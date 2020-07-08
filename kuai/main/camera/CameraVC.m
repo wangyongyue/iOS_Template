@@ -76,7 +76,8 @@ typedef void(^PropertyChangeBlock) (AVCaptureDevice * captureDevice);
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.navigationController.navigationBar setHidden:YES];
+
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"自定义拍照和视频录制控件";
     
