@@ -8,10 +8,8 @@
 
 #import "MainController.h"
 #import "Collection.h"
-#import "Server.h"
 
 @interface MainController ()
-@property(nonatomic,strong)Server *server;
 
 @end
 
@@ -28,6 +26,8 @@
     [self.tabBarController.tabBar setHidden:YES];
 
 }
+
+
 - (Server *)server{
     if (_server == nil) {
         _server = [[Server alloc]init];

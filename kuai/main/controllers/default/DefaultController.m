@@ -9,10 +9,8 @@
 #import "DefaultController.h"
 #import "Table.h"
 #import "Collection.h"
-#import "Server.h"
 
 @interface DefaultController ()
-@property(nonatomic,strong)Server *server;
 
 @end
 

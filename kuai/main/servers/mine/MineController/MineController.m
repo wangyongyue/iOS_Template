@@ -11,15 +11,17 @@
 
 
 @interface MineController ()
-@property(nonatomic,strong)Server *server;
 
 @end
 @implementation MineController
 
-- (Server *)server{
-    if (_server == nil) {
-        _server = [[Mine alloc]init];
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+        self.server = [[Mine alloc]init];
     }
-    return _server;
+    return self;
 }
 @end

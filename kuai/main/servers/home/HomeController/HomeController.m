@@ -11,20 +11,25 @@
 #import "Router.h"
 #import "Home.h"
 @interface HomeController ()
-@property(nonatomic,strong)Server *server;
 
 @end
 @implementation HomeController
 
-- (Server *)server{
-    if (_server == nil) {
-        _server = [[Home alloc]init];
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+        self.server = [[Home alloc]init];
     }
-    return _server;
+    return self;
 }
+
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"sdf";
     
     UIButton *right = [UIButton buttonWithType:UIButtonTypeSystem];
     [right setTitle:@"camera" forState:UIControlStateNormal];
@@ -33,8 +38,6 @@
     right.frame = CGRectMake(0, 0, 40, 40);
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:right];
     self.navigationItem.rightBarButtonItem  = item;
-
-    self.navigationItem.title = @"sdf";
         
 }
 - (void)onClick{
