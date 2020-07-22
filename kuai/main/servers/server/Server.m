@@ -14,10 +14,15 @@
 - (NSMutableDictionary *)body{return [NSMutableDictionary dictionary];}
 
 - (void)reloadData:(ReloadBlock)block{self.reload = block;}
-
-
 - (void)loadTableData:(NSDictionary *)reponse{}
 - (void)tableIndex:(NSInteger)index{}
+- (void)networkRequest{
+    if (self.url.length == 0) {
+        [self loadTableData:nil];
+        self.reload();
+        return;
+    }
+}
 - (NSMutableArray *)array{
     if (_array == nil) {
         _array = [NSMutableArray array];

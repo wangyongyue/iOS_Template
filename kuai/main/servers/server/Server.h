@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (void)reloadData:(ReloadBlock)block;
+- (void)networkRequest;
 
 
 @end

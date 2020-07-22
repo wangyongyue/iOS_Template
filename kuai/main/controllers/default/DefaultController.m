@@ -40,11 +40,11 @@
     }];
     table.backgroundColor = [UIColor blackColor];
     table.array = self.server.array;
-    
     [self.server reloadData:^{
         [table reloadData];
     }];
-    
+    [self.server networkRequest];
+
     
 }
 

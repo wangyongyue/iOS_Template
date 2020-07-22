@@ -23,7 +23,6 @@
         m.title1 = str;
         [self.array addObject:m];
     }
-    self.reload();
     
 }
 - (void)tableIndex:(NSInteger)index{

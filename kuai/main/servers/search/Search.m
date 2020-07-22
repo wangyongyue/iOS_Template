@@ -26,7 +26,7 @@
         
     }
     
-    self.reload();
+    
 }
 - (void)tableIndex:(NSInteger)index{
     

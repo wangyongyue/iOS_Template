@@ -43,7 +43,7 @@
     Collection *table = [[Collection alloc]initWithFrame:rect collectionViewLayout:flowLayout];
     [self.view addSubview:table];
     [table tableIndex:^(NSInteger index) {
-        NSLog(@"%ld",index);
+        NSLog(@"%d",index);
         [self.server tableIndex:index];
     }];
     table.backgroundColor = [UIColor blackColor];
@@ -51,8 +51,7 @@
     [self.server reloadData:^{
         [table reloadData];
     }];
-    
-    [self.server loadTableData:nil];
+    [self.server networkRequest];
     
 }
 
