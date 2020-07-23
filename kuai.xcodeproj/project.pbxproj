@@ -25,12 +25,9 @@
 		188CB1DC2491C3B200B8A194 /* TabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB1DB2491C3B200B8A194 /* TabBarVC.m */; };
 		188CB1E32491C41100B8A194 /* Collection.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB1E22491C41100B8A194 /* Collection.m */; };
 		188CB1E62491C42300B8A194 /* Table.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB1E52491C42300B8A194 /* Table.m */; };
-		188CB1F22491D21500B8A194 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB1F12491D21500B8A194 /* Login.m */; };
 		188CB1F92491DB1F00B8A194 /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB1F82491DB1F00B8A194 /* TestCell.m */; };
 		188CB1FC2492029700B8A194 /* TestCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB1FB2492029700B8A194 /* TestCCell.m */; };
 		188CB1FD2492048700B8A194 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB1ED2491C79000B8A194 /* Server.m */; };
-		188CB203249214BB00B8A194 /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB202249214BB00B8A194 /* Register.m */; };
-		188CB206249214C400B8A194 /* Forget.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB205249214C400B8A194 /* Forget.m */; };
 		188CB209249214D000B8A194 /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB208249214D000B8A194 /* Home.m */; };
 		188CB20C249214DA00B8A194 /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB20B249214DA00B8A194 /* Search.m */; };
 		188CB20F249214E400B8A194 /* Mine.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB20E249214E400B8A194 /* Mine.m */; };
@@ -109,17 +106,11 @@
 		188CB1E52491C42300B8A194 /* Table.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Table.m; sourceTree = "<group>"; };
 		188CB1EC2491C79000B8A194 /* Server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
 		188CB1ED2491C79000B8A194 /* Server.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Server.m; sourceTree = "<group>"; };
-		188CB1F02491D21500B8A194 /* Login.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
-		188CB1F12491D21500B8A194 /* Login.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		188CB1F72491DB1F00B8A194 /* TestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCell.h; sourceTree = "<group>"; };
 		188CB1F82491DB1F00B8A194 /* TestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCell.m; sourceTree = "<group>"; };
 		188CB1FA2492029700B8A194 /* TestCCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCCell.h; sourceTree = "<group>"; };
 		188CB1FB2492029700B8A194 /* TestCCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCCell.m; sourceTree = "<group>"; };
 		188CB1FE2492062A00B8A194 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		188CB201249214BB00B8A194 /* Register.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Register.h; sourceTree = "<group>"; };
-		188CB202249214BB00B8A194 /* Register.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Register.m; sourceTree = "<group>"; };
-		188CB204249214C400B8A194 /* Forget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Forget.h; sourceTree = "<group>"; };
-		188CB205249214C400B8A194 /* Forget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Forget.m; sourceTree = "<group>"; };
 		188CB207249214D000B8A194 /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
 		188CB208249214D000B8A194 /* Home.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
 		188CB20A249214DA00B8A194 /* Search.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
@@ -195,6 +186,33 @@
 			path = flowLayout;
 			sourceTree = "<group>";
 		};
+		1861F3B124C95A4900CADE6C /* mine */ = {
+			isa = PBXGroup;
+			children = (
+				188CB20D249214E400B8A194 /* Mine.h */,
+				188CB20E249214E400B8A194 /* Mine.m */,
+			);
+			path = mine;
+			sourceTree = "<group>";
+		};
+		1861F3B224C95A4C00CADE6C /* search */ = {
+			isa = PBXGroup;
+			children = (
+				188CB20A249214DA00B8A194 /* Search.h */,
+				188CB20B249214DA00B8A194 /* Search.m */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		1861F3B324C95A4F00CADE6C /* home */ = {
+			isa = PBXGroup;
+			children = (
+				188CB207249214D000B8A194 /* Home.h */,
+				188CB208249214D000B8A194 /* Home.m */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
 		188CB168248F647300B8A194 = {
 			isa = PBXGroup;
 			children = (
@@ -261,8 +279,8 @@
 				188CB1C42490CDE700B8A194 /* navigation */,
 				188CB1C32490CDE500B8A194 /* tabBar */,
 				188CB1C12490CDDF00B8A194 /* servers */,
-				188CB1C02490CDDD00B8A194 /* views */,
 				188CB1BF2490CDDA00B8A194 /* controllers */,
+				188CB1C02490CDDD00B8A194 /* views */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -270,9 +288,10 @@
 		188CB1BF2490CDDA00B8A194 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				45BC2A7E24B60045002E8771 /* HomeController */,
+				45BC2A7F24B6007A002E8771 /* SearchController */,
+				45BC2A8024B6007D002E8771 /* MineController */,
 				45BC2A7724B5FF57002E8771 /* base */,
-				45BC2A7624B5FF54002E8771 /* main */,
-				188CB1EF2491CDD900B8A194 /* default */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -292,13 +311,10 @@
 		188CB1C12490CDDF00B8A194 /* servers */ = {
 			isa = PBXGroup;
 			children = (
+				1861F3B324C95A4F00CADE6C /* home */,
+				1861F3B224C95A4C00CADE6C /* search */,
+				1861F3B124C95A4900CADE6C /* mine */,
 				188CB1EB2491C77F00B8A194 /* server */,
-				188CB1CF2490CE6E00B8A194 /* login */,
-				188CB1CE2490CE6B00B8A194 /* register */,
-				188CB1CD2490CE6700B8A194 /* forget */,
-				188CB1CC2490CE6200B8A194 /* home */,
-				188CB1CB2490CE5600B8A194 /* search */,
-				188CB1CA2490CE5300B8A194 /* mine */,
 			);
 			path = servers;
 			sourceTree = "<group>";
@@ -329,66 +345,6 @@
 				188CB1D82491C3A400B8A194 /* NavgationVC.m */,
 			);
 			path = navigation;
-			sourceTree = "<group>";
-		};
-		188CB1CA2490CE5300B8A194 /* mine */ = {
-			isa = PBXGroup;
-			children = (
-				45BC2A8024B6007D002E8771 /* MineController */,
-				188CB20D249214E400B8A194 /* Mine.h */,
-				188CB20E249214E400B8A194 /* Mine.m */,
-			);
-			path = mine;
-			sourceTree = "<group>";
-		};
-		188CB1CB2490CE5600B8A194 /* search */ = {
-			isa = PBXGroup;
-			children = (
-				45BC2A7F24B6007A002E8771 /* SearchController */,
-				188CB20A249214DA00B8A194 /* Search.h */,
-				188CB20B249214DA00B8A194 /* Search.m */,
-			);
-			path = search;
-			sourceTree = "<group>";
-		};
-		188CB1CC2490CE6200B8A194 /* home */ = {
-			isa = PBXGroup;
-			children = (
-				45BC2A7E24B60045002E8771 /* HomeController */,
-				188CB207249214D000B8A194 /* Home.h */,
-				188CB208249214D000B8A194 /* Home.m */,
-			);
-			path = home;
-			sourceTree = "<group>";
-		};
-		188CB1CD2490CE6700B8A194 /* forget */ = {
-			isa = PBXGroup;
-			children = (
-				45BC2A7D24B6003A002E8771 /* ForgetController */,
-				188CB204249214C400B8A194 /* Forget.h */,
-				188CB205249214C400B8A194 /* Forget.m */,
-			);
-			path = forget;
-			sourceTree = "<group>";
-		};
-		188CB1CE2490CE6B00B8A194 /* register */ = {
-			isa = PBXGroup;
-			children = (
-				45BC2A7C24B60020002E8771 /* RegisterContrller */,
-				188CB201249214BB00B8A194 /* Register.h */,
-				188CB202249214BB00B8A194 /* Register.m */,
-			);
-			path = register;
-			sourceTree = "<group>";
-		};
-		188CB1CF2490CE6E00B8A194 /* login */ = {
-			isa = PBXGroup;
-			children = (
-				45BC2A7B24B60010002E8771 /* LoginController */,
-				188CB1F02491D21500B8A194 /* Login.h */,
-				188CB1F12491D21500B8A194 /* Login.m */,
-			);
-			path = login;
 			sourceTree = "<group>";
 		};
 		188CB1D12490CF8400B8A194 /* camera */ = {
@@ -586,31 +542,12 @@
 		45BC2A7724B5FF57002E8771 /* base */ = {
 			isa = PBXGroup;
 			children = (
+				188CB1EF2491CDD900B8A194 /* default */,
+				45BC2A7624B5FF54002E8771 /* main */,
 				45BC2A7824B5FF73002E8771 /* BaseController.h */,
 				45BC2A7924B5FF73002E8771 /* BaseController.m */,
 			);
 			path = base;
-			sourceTree = "<group>";
-		};
-		45BC2A7B24B60010002E8771 /* LoginController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginController;
-			sourceTree = "<group>";
-		};
-		45BC2A7C24B60020002E8771 /* RegisterContrller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RegisterContrller;
-			sourceTree = "<group>";
-		};
-		45BC2A7D24B6003A002E8771 /* ForgetController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ForgetController;
 			sourceTree = "<group>";
 		};
 		45BC2A7E24B60045002E8771 /* HomeController */ = {
@@ -775,7 +712,6 @@
 				188CB1FD2492048700B8A194 /* Server.m in Sources */,
 				45BC2A7A24B5FF73002E8771 /* BaseController.m in Sources */,
 				188CB1D92491C3A400B8A194 /* NavgationVC.m in Sources */,
-				188CB203249214BB00B8A194 /* Register.m in Sources */,
 				188CB1DC2491C3B200B8A194 /* TabBarVC.m in Sources */,
 				188CB1FC2492029700B8A194 /* TestCCell.m in Sources */,
 				188CB17C248F647300B8A194 /* ViewController.m in Sources */,
@@ -800,8 +736,6 @@
 				188CB1AB248F65D700B8A194 /* CameraVC.m in Sources */,
 				188CB2482493235300B8A194 /* UIView+gesture.m in Sources */,
 				188CB1F92491DB1F00B8A194 /* TestCell.m in Sources */,
-				188CB1F22491D21500B8A194 /* Login.m in Sources */,
-				188CB206249214C400B8A194 /* Forget.m in Sources */,
 				188CB1B1248F855500B8A194 /* PlayVC.m in Sources */,
 				45BC2A8924B60682002E8771 /* MineController.m in Sources */,
 				188CB1D62491C38900B8A194 /* Router.m in Sources */,
