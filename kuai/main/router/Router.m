@@ -23,6 +23,16 @@
     [na popViewControllerAnimated:YES];
     
 }
++ (UINavigationController *)navigationController{
+    
+    if (![[UIApplication sharedApplication].windows.lastObject isKindOfClass:[UIWindow class]]) {
+        NSAssert(0, @"未获取到导航控制器");
+        return nil;
+    }
+    UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    return [self getCurrentNCFrom:rootViewController];
+    
+}
 + (UIViewController *)currenViewController{
     
    UINavigationController *na =  [Router currentNC];

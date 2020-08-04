@@ -7,8 +7,7 @@
 //
 
 #import "DefaultController.h"
-#import "Table.h"
-#import "Collection.h"
+
 
 @interface DefaultController ()
 
@@ -26,28 +25,35 @@
     [self.tabBarController.tabBar setHidden:NO];
 
 }
+- (Collection *)table{
+    if (_table == nil) {
+        CGRect rect = CGRectMake(0, Top - 20, ScreenWidth, ScreenHeight - Top + 20);
+        FlowLayout *flowLayout = [[FlowLayout alloc]initWithScrollDirection:UICollectionViewScrollDirectionVertical];
+        _table = [[Collection alloc]initWithFrame:rect collectionViewLayout:flowLayout];
+        [self.view addSubview:_table];
+        [_table tableIndex:^(NSInteger index) {
+            NSLog(@"%ld",index);
+            [self.server tableIndex:index];
+        }];
+        _table.backgroundColor = [UIColor blackColor];
+    }
+    return _table;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CGRect rect = CGRectMake(0, Top - 20, ScreenWidth, ScreenHeight - Top + 20);
-    FlowLayout *flowLayout = [[FlowLayout alloc]initWithScrollDirection:UICollectionViewScrollDirectionVertical];
-    Collection *table = [[Collection alloc]initWithFrame:rect collectionViewLayout:flowLayout];
-    [self.view addSubview:table];
-    [table tableIndex:^(NSInteger index) {
-        NSLog(@"%d",index);
-        [self.server tableIndex:index];
-    }];
-    table.backgroundColor = [UIColor blackColor];
-    table.array = self.server.array;
+    
+    __weak typeof(self) weakSelf = self;
     [self.server reloadData:^{
-        [table reloadData];
+        [weakSelf reloadData];
     }];
     [self.server networkRequest];
-
     
 }
-
-
+- (void)reloadData{
+    self.table.array = self.server.array;
+    [self.table reloadData];
+}
 
 @end

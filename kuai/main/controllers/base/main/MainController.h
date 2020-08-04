@@ -10,12 +10,14 @@
 #import <UIKit/UIKit.h>
 #import "BaseController.h"
 #import "Server.h"
+#import "Collection.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MainController : BaseController
 @property(nonatomic,strong)Server *server;
+@property(nonatomic,strong)Collection *table;
 
 @end
 

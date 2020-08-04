@@ -29,6 +29,9 @@
     }
     return _array;
 }
-
+- (UINavigationController *)navigationController{
+    
+    return [Router navigationController];
+}
 
 @end

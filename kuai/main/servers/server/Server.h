@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Server : NSObject
 @property(nonatomic,strong)NSMutableArray *array;
 @property(nonatomic,copy)ReloadBlock reload;
+@property(nonatomic,strong)UINavigationController *navigationController;
 
 - (NSString *)url;
 - (NSMutableDictionary *)body;
@@ -25,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)reloadData:(ReloadBlock)block;
 - (void)networkRequest;
+
 
 
 @end
