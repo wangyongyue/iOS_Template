@@ -44,6 +44,8 @@
 		188CB25424934C2900B8A194 /* BeSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CB25324934C2900B8A194 /* BeSlide.m */; };
 		18C7478A24A078E8007AE7C0 /* Cell005View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C7478924A078E8007AE7C0 /* Cell005View.xib */; };
 		18C7478D24A0923C007AE7C0 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7478C24A0923C007AE7C0 /* MainController.m */; };
+		18D3582F24E23073006FAF06 /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3582E24E23073006FAF06 /* Network.m */; };
+		372614C9B63A0DD1D23E0D12 /* libPods-kuai.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0F5A5D5547DAC72A450A36 /* libPods-kuai.a */; };
 		45BC2A7A24B5FF73002E8771 /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BC2A7924B5FF73002E8771 /* BaseController.m */; };
 		45BC2A8324B601EF002E8771 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BC2A8224B601EF002E8771 /* HomeController.m */; };
 		45BC2A8624B60678002E8771 /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BC2A8524B60678002E8771 /* SearchController.m */; };
@@ -142,6 +144,9 @@
 		18C7478924A078E8007AE7C0 /* Cell005View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell005View.xib; sourceTree = "<group>"; };
 		18C7478B24A0923C007AE7C0 /* MainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		18C7478C24A0923C007AE7C0 /* MainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		18D3582D24E23073006FAF06 /* Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
+		18D3582E24E23073006FAF06 /* Network.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Network.m; sourceTree = "<group>"; };
+		19E279FC5FEA84E7A898995C /* Pods-kuai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kuai.release.xcconfig"; path = "Target Support Files/Pods-kuai/Pods-kuai.release.xcconfig"; sourceTree = "<group>"; };
 		45BC2A7824B5FF73002E8771 /* BaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseController.h; sourceTree = "<group>"; };
 		45BC2A7924B5FF73002E8771 /* BaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseController.m; sourceTree = "<group>"; };
 		45BC2A8124B601EF002E8771 /* HomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
@@ -150,6 +155,8 @@
 		45BC2A8524B60678002E8771 /* SearchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
 		45BC2A8724B60682002E8771 /* MineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
 		45BC2A8824B60682002E8771 /* MineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
+		7EFF6B58D342042716DE0688 /* Pods-kuai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kuai.debug.xcconfig"; path = "Target Support Files/Pods-kuai/Pods-kuai.debug.xcconfig"; sourceTree = "<group>"; };
+		8E0F5A5D5547DAC72A450A36 /* libPods-kuai.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-kuai.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				372614C9B63A0DD1D23E0D12 /* libPods-kuai.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +185,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110438529745292F12B38468 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7EFF6B58D342042716DE0688 /* Pods-kuai.debug.xcconfig */,
+				19E279FC5FEA84E7A898995C /* Pods-kuai.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		186014B9249717360038DAE8 /* flowLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +237,8 @@
 				188CB18F248F647900B8A194 /* kuaiTests */,
 				188CB19A248F647900B8A194 /* kuaiUITests */,
 				188CB172248F647300B8A194 /* Products */,
+				110438529745292F12B38468 /* Pods */,
+				6730804CC031511A90448CFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -271,6 +290,7 @@
 		188CB1BE2490CDD000B8A194 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				18D3582B24E23030006FAF06 /* third */,
 				188CB24924934BB700B8A194 /* behavior */,
 				188CB1D22490CF8F00B8A194 /* video */,
 				188CB1D12490CF8400B8A194 /* camera */,
@@ -530,6 +550,23 @@
 			path = tap;
 			sourceTree = "<group>";
 		};
+		18D3582B24E23030006FAF06 /* third */ = {
+			isa = PBXGroup;
+			children = (
+				18D3582C24E2304A006FAF06 /* Network */,
+			);
+			path = third;
+			sourceTree = "<group>";
+		};
+		18D3582C24E2304A006FAF06 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				18D3582D24E23073006FAF06 /* Network.h */,
+				18D3582E24E23073006FAF06 /* Network.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		45BC2A7624B5FF54002E8771 /* main */ = {
 			isa = PBXGroup;
 			children = (
@@ -577,6 +614,14 @@
 			path = MineController;
 			sourceTree = "<group>";
 		};
+		6730804CC031511A90448CFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E0F5A5D5547DAC72A450A36 /* libPods-kuai.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -584,9 +629,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 188CB1A0248F647900B8A194 /* Build configuration list for PBXNativeTarget "kuai" */;
 			buildPhases = (
+				7BF2158FA78127413B43A1E5 /* [CP] Check Pods Manifest.lock */,
 				188CB16D248F647300B8A194 /* Sources */,
 				188CB16E248F647300B8A194 /* Frameworks */,
 				188CB16F248F647300B8A194 /* Resources */,
+				CB1419F84BD1695403447692 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -703,6 +750,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7BF2158FA78127413B43A1E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kuai-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB1419F84BD1695403447692 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kuai/Pods-kuai-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kuai/Pods-kuai-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		188CB16D248F647300B8A194 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -742,6 +840,7 @@
 				188CB25124934C1900B8A194 /* BeTap.m in Sources */,
 				188CB23F24921C4A00B8A194 /* Cell008View.m in Sources */,
 				188CB187248F647800B8A194 /* main.m in Sources */,
+				18D3582F24E23073006FAF06 /* Network.m in Sources */,
 				188CB1E32491C41100B8A194 /* Collection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -909,6 +1008,7 @@
 		};
 		188CB1A1248F647900B8A194 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EFF6B58D342042716DE0688 /* Pods-kuai.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -927,6 +1027,7 @@
 		};
 		188CB1A2248F647900B8A194 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19E279FC5FEA84E7A898995C /* Pods-kuai.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
